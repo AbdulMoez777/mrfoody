@@ -54,6 +54,7 @@ function Category() {
           );
         })}
       </div>
+      <hr  className="my-12 border-[1px] border-gray-300"/>
     </div>
   );
 }

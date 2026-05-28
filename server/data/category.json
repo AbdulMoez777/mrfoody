@@ -1,7 +1,7 @@
 [
     {
-        "image": "North_Indian_4.jpeg",
-        "path": "north-indian"
+        "image": "Biryani_2.jpeg",
+        "path": "biryani"
     },
     {
         "image": "Pizza.jpeg",
@@ -20,7 +20,7 @@
         "path": "paratha"
     },
     {
-        "image": "Biryani_2.jpeg",
+        "image": "Chinese.jpeg",
         "path": "biryani"
     },
     {
@@ -48,8 +48,8 @@
         "path": "gulab-jamun"
     },
     {
-        "image": "Ice_Creams.jpeg",
-        "path": "ice-creams"
+        "image": "Noodles.jpeg",
+        "path": "noodles"
     },
     {
         "image": "Idli.jpeg",
