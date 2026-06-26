@@ -60,11 +60,7 @@ function Header() {
       <header className="p-3 shadow-xl">
         <div className="max-w-[1100px] mx-auto  flex items-center gap-5">
           <div className="w-[100px]">
-            <img
-              src="public\images\mrfoody-logo.webp"
-              className="w-full"
-              alt=""
-            />
+            <img src="http://localhost:5000/images/mrfoody-logo.webp" className="w-full" alt="MrFoody Logo" />
           </div>
           <div className="">
             <span className="font-bold  border-b-[3px] border-[black]">

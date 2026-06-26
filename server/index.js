@@ -8,23 +8,22 @@ const port = 5000;
 
 // Middleware to parse JSON bodies
 app.use(express.json());
-app.use(cors())
-app.use(express.static("public"));
+app.use(cors());
+
+
+// This tells Express to look inside the "images" folder whenever someone goes to http://localhost:5000/images/...
+app.use('/images', express.static(path.join(__dirname, 'images')));
 
 // Endpoint to get data from category.json
 app.get('/categories', (req, res) => {
-    // Path to category.json file
     const filePath = path.join(__dirname, 'data/category.json');
 
-    // Read the file
     fs.readFile(filePath, 'utf8', (err, data) => {
         if (err) {
             console.error('Error reading file:', err);
             res.status(500).send('Internal Server Error');
             return;
         }
-
-        // Parse JSON data
         try {
             const categories = JSON.parse(data);
             res.json(categories);
@@ -34,19 +33,17 @@ app.get('/categories', (req, res) => {
         }
     });
 });
+
+// Endpoint to get data from restaurantChains.json
 app.get('/top-restaurant-chains', (req, res) => {
-    // Path to restaurantChains.json file
     const filePath = path.join(__dirname, 'data/restaurantChains.json');
 
-    // Read the file
     fs.readFile(filePath, 'utf8', (err, data) => {
         if (err) {
             console.error('Error reading file:', err);
             res.status(500).send('Internal Server Error');
             return;
         }
-
-        // Parse JSON data
         try {
             const restaurantChains = JSON.parse(data);
             res.json(restaurantChains);
@@ -56,7 +53,6 @@ app.get('/top-restaurant-chains', (req, res) => {
         }
     });
 });
-
 
 // Start the server
 app.listen(port, () => {
