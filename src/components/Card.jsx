@@ -5,8 +5,8 @@ function Card(props) {
   console.log("Card props data:", props);
   
   return (
-    // Added a slight hover effect to make the card interactive and feel premium
-    <div className="w-[260px] shrink-0 grow group cursor-pointer transition duration-200 hover:scale-[0.98]">
+    
+    <div className="w-[260px] shrink-0 grow group cursor-pointer transition duration-200 hover:scale-[0.98] mb-3">
       
       {/* Image Container */}
       <div className="h-[185px] rounded-[16px] overflow-hidden relative shadow-sm">
@@ -16,7 +16,7 @@ function Card(props) {
           alt={props.title || "Restaurant"}
         />
         
-        {/* IMPROVED OVERLAY: Added a smooth black gradient at the bottom so the offer text always pops, regardless of the image background color */}
+        
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-3 text-white text-[22px] font-extrabold tracking-tight uppercase">
           {props.offer}
         </div>

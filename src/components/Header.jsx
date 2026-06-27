@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { RxCaretDown } from "react-icons/rx";
+import { RxCaretDown, RxCross2 } from "react-icons/rx"; 
 import { IoIosSearch } from "react-icons/io";
 import { CiDiscount1 } from "react-icons/ci";
 
@@ -41,10 +41,7 @@ function Header() {
 
   return (
     <>
-      {/* FIX 1: Added z-50 so it stacks above the content images.
-        FIX 2: Added bg-black/50 to dim the page when active.
-        FIX 3: Added top-0 left-0 to fix it properly to the browser frame views.
-      */}
+      {/* Black Dimmed Overlay Backdrop Layout Screen Section */}
       <div
         className="black-overlay w-full h-full fixed top-0 left-0 bg-black/50 duration-500 z-50"
         style={{
@@ -53,18 +50,29 @@ function Header() {
         }}
         onClick={hideSideMenu}
       >
+        {/* Sliding White Sidebar Wrapper Container Block */}
         <div
           onClick={(e) => {
             e.stopPropagation();
           }}
-          className="w-[400px] h-full bg-white absolute duration-[400ms]"
+          className="w-[400px] h-full bg-white absolute duration-[400ms] p-5 shadow-2xl"
           style={{ left: toogle ? "0%" : "-100%" }}
         >
-          {/* You can add your sidebar navigation content or close buttons here */}
+         
+          <div className="flex items-center justify-between mb-6">
+            <div className="text-xl font-bold text-gray-800">Menu Options</div>
+            <RxCross2 
+              onClick={hideSideMenu} 
+              className="text-[26px] text-gray-500 cursor-pointer hover:text-black hover:rotate-90 transition duration-200" 
+            />
+          </div>
+
+          {/* You can safely drop down any input fields or filter side links below here */}
+          <div className="text-sm text-gray-400">Apply location or cuisine modifications...</div>
         </div>
       </div>
 
-      <header className="p-3 shadow-xl">
+      <header className="p-3 shadow-xl sticky top-0 bg-white z-[40]">
         <div className="max-w-[1100px] mx-auto flex items-center gap-5">
           <div className="w-[100px]">
             <img src="http://localhost:5000/images/mrfoody-logo.webp" className="w-full" alt="MrFoody Logo" />

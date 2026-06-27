@@ -18,7 +18,7 @@ function TopRest() {
 
 
   return (
-    <div className="max-w-[1100px] mx-auto  items-center mb-[100px] ">
+    <div className="max-w-[1100px] mx-auto  items-center">
           <div className="flex items-center my-3 justify-between ">
             <div className="text-[25px] font-bold">Top Restaurants in Jhelum</div>
             <div className="flex">
