@@ -1,16 +1,27 @@
-# React + Vite
+🍔 MrFoody - Food Delivery Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MrFoody is a food delivery web application inspired by local Pakistani restaurants. It allows users to browse restaurants, explore menus, add items to their cart, and place orders through a simple checkout process. The project is built with React for the frontend and Express for the backend.
 
-Currently, two official plugins are available:
+✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Browse restaurants and food categories from popular local places like Javed Nihari, Butt Karahi, and Student Biryani.
+- Add, remove, and update food items in the shopping cart.
+- Automatic calculation of delivery charges and GST.
+- Complete checkout flow with multiple payment options (Cash on Delivery, Card, and UPI).
+- Responsive design that works well on desktop, tablet, and mobile devices.
+- Fetches restaurant, category, and menu data from an Express API.
 
-## React Compiler
+🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Frontend**
+- React 
+- Vite
+- Tailwind CSS
+- React Icons
 
-## Expanding the ESLint configuration
+**Backend**
+- Node.js
+- Express
+- CORS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
