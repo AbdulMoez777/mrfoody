@@ -1,0 +1,308 @@
+{
+  "1": [
+    {
+      "id": 101,
+      "name": "Chicken Tikka Pizza (Large)",
+      "price": 1150,
+      "description": "Broadway's signature pizza topped with spicy chicken tikka chunks, onions, green peppers, and rich mozzarella cheese.",
+      "image": "Pizza.jpeg",
+      "isVeg": false
+    },
+    {
+      "id": 102,
+      "name": "Tikka Macaroni Pasta",
+      "price": 450,
+      "description": "Spiced elbow macaroni stir-fried with grilled chicken tikka, bell peppers, tomatoes, and local spices.",
+      "image": "Pasta.jpeg",
+      "isVeg": false
+    },
+    {
+      "id": 103,
+      "name": "Cheesy Garlic Bread",
+      "price": 280,
+      "description": "Cheesy garlic bread slices baked until golden, topped with butter, herbs, and melted mozzarella.",
+      "image": "garlic_bread.png",
+      "isVeg": true
+    },
+    {
+      "id": 104,
+      "name": "Choco Lava Cake",
+      "price": 190,
+      "description": "Warm chocolate cake with a delicious molten chocolate center, baked fresh.",
+      "image": "choco_lava_cake.png",
+      "isVeg": true
+    }
+  ],
+  "2": [
+    {
+      "id": 201,
+      "name": "Desi Gulab Jamun (1 kg)",
+      "price": 680,
+      "description": "Soft, sweet milk-solid dumplings dipped in cardamom-infused sugar syrup.",
+      "image": "Gulab_Jamun.jpeg",
+      "isVeg": true
+    },
+    {
+      "id": 202,
+      "name": "Special Halwa Puri Nashta",
+      "price": 240,
+      "description": "Classic breakfast: 2 fluffy pooris served with spicy chickpea curry (cholay) and sweet suji halwa.",
+      "image": "Poori.jpeg",
+      "isVeg": true
+    },
+    {
+      "id": 203,
+      "name": "Samosa Chaat Plate",
+      "price": 150,
+      "description": "2 crushed potato samosas topped with spicy chickpea curry, chopped onions, and sweet & sour tamarind chutney.",
+      "image": "Chole_Bature.jpeg",
+      "isVeg": true
+    },
+    {
+      "id": 204,
+      "name": "Suji Halwa Plate",
+      "price": 120,
+      "description": "Traditional sweet semolina halwa cooked in pure ghee, garnished with almonds and pistachios.",
+      "image": "suji_halwa.png",
+      "isVeg": true
+    }
+  ],
+  "3": [
+    {
+      "id": 301,
+      "name": "Special Mutton Karahi",
+      "price": 1450,
+      "description": "Fresh mutton cooked with tomatoes, black pepper, ginger, and green chillies in a traditional iron wok.",
+      "image": "mutton_karahi.png",
+      "isVeg": false
+    },
+    {
+      "id": 302,
+      "name": "Special Chicken Karahi",
+      "price": 950,
+      "description": "Our signature chicken karahi cooked in high-quality desi ghee and freshly ground spices.",
+      "image": "chicken_karahi.png",
+      "isVeg": false
+    },
+    {
+      "id": 303,
+      "name": "Lacha Paratha",
+      "price": 90,
+      "description": "Crispy, multi-layered flatbread fried in premium ghee, perfect with karahi.",
+      "image": "Paratha.jpeg",
+      "isVeg": true
+    },
+    {
+      "id": 304,
+      "name": "Seekh Kabab Plate",
+      "price": 490,
+      "description": "4 pieces of grilled skewered beef mince kababs served with spicy mint raita.",
+      "image": "seekh_kabab.png",
+      "isVeg": false
+    }
+  ],
+  "4": [
+    {
+      "id": 401,
+      "name": "Chicken Biryani Single",
+      "price": 290,
+      "description": "Spicy and aromatic basmati rice layered with juicy chicken piece, cooked in classic Karachi style.",
+      "image": "Biryani_2.jpeg",
+      "isVeg": false
+    },
+    {
+      "id": 402,
+      "name": "Beef Haleem",
+      "price": 260,
+      "description": "Slow-cooked stew of beef, lentils, and wheat, garnished with fried onions, ginger, and lemon.",
+      "image": "beef_haleem.png",
+      "isVeg": false
+    },
+    {
+      "id": 403,
+      "name": "Shahi Zarda",
+      "price": 220,
+      "description": "Traditional sweet yellow rice cooked with milk, cardamom, and loaded with almonds and pistachios.",
+      "image": "shahi_zarda.png",
+      "isVeg": true
+    },
+    {
+      "id": 404,
+      "name": "Zeera Raita & Fresh Salad",
+      "price": 80,
+      "description": "Yogurt blended with cumin seeds, served alongside freshly chopped cucumbers and tomatoes.",
+      "image": "Salad.jpeg",
+      "isVeg": true
+    }
+  ],
+  "5": [
+    {
+      "id": 501,
+      "name": "Special Falooda",
+      "price": 299,
+      "description": "A rich glass of sweet rabri milk, cornflour vermicelli, basil seeds, topped with kulfa ice cream scoops.",
+      "image": "w7ndo1dkkk6kf4qfz2p1.jpeg",
+      "isVeg": true
+    },
+    {
+      "id": 502,
+      "name": "Kulfa Ice Cream Scoop",
+      "price": 120,
+      "description": "Classic Pakistani traditional rich ice cream flavored with saffron and nuts.",
+      "image": "Ice_Creams.jpeg",
+      "isVeg": true
+    },
+    {
+      "id": 503,
+      "name": "Mango Shake",
+      "price": 180,
+      "description": "Thick milk shake blended with sweet Pakistani Chaunsa mangoes and cream.",
+      "image": "icecream.jpeg",
+      "isVeg": true
+    },
+    {
+      "id": 504,
+      "name": "Chocolate Brownie with Ice Cream",
+      "price": 260,
+      "description": "Warm fudge brownie served with a scoop of vanilla ice cream and hot chocolate syrup.",
+      "image": "brownie_ice_cream.png",
+      "isVeg": true
+    }
+  ],
+  "6": [
+    {
+      "id": 601,
+      "name": "Peshawari Mutton Karahi",
+      "price": 1650,
+      "description": "Traditional Shinwari karahi cooked with sheep fat, tomatoes, black pepper, and green chillies (no onions).",
+      "image": "mutton_karahi.png",
+      "isVeg": false
+    },
+    {
+      "id": 602,
+      "name": "Peshawari Chicken Karahi",
+      "price": 1050,
+      "description": "Juicy chicken cooked in Shinwari style with black pepper, fresh ginger, and tomatoes.",
+      "image": "chicken_karahi.png",
+      "isVeg": false
+    },
+    {
+      "id": 603,
+      "name": "Tandoori Roti",
+      "price": 20,
+      "description": "Crispy tandoori whole wheat flatbread baked fresh on clay oven walls.",
+      "image": "tandoori_roti.png",
+      "isVeg": true
+    },
+    {
+      "id": 604,
+      "name": "Balochi Chicken Sajji",
+      "price": 1100,
+      "description": "Whole chicken roasted slow on charcoal, rubbed with special Balochi chatpatta spices.",
+      "image": "sajji.jpeg",
+      "isVeg": false
+    }
+  ],
+  "7": [
+    {
+      "id": 701,
+      "name": "Special Nalli Nihari",
+      "price": 550,
+      "description": "Slow cooked beef shank stew in rich spiced gravy, topped with warm bone marrow (nalli).",
+      "image": "nalli_nihari.png",
+      "isVeg": false
+    },
+    {
+      "id": 702,
+      "name": "Javed Plain Beef Nihari",
+      "price": 420,
+      "description": "Deliciously thick and aromatic beef stew cooked overnight, garnished with ginger and green chillies.",
+      "image": "nalli_nihari.png",
+      "isVeg": false
+    },
+    {
+      "id": 703,
+      "name": "Tandoori Sheermal",
+      "price": 80,
+      "description": "Slightly sweet, saffron-infused tandoori flatbread, perfect companion for Nihari.",
+      "image": "tandoori_sheermal.png",
+      "isVeg": true
+    },
+    {
+      "id": 704,
+      "name": "Beef Paya",
+      "price": 480,
+      "description": "Traditional slow-cooked gelatinous beef trotters in rich aromatic spiced soup.",
+      "image": "beef_paya.png",
+      "isVeg": false
+    }
+  ],
+  "8": [
+    {
+      "id": 801,
+      "name": "Crispy Chicken Burger",
+      "price": 320,
+      "description": "Golden crispy fried chicken breast fillet inside a soft bun with lettuce and mayo.",
+      "image": "Burger.jpeg",
+      "isVeg": false
+    },
+    {
+      "id": 802,
+      "name": "Howdy Beef Burger",
+      "price": 390,
+      "description": "Premium grilled beef patty with cheese slice, onions, pickles, and signature Howdy burger sauce.",
+      "image": "Burger.jpeg",
+      "isVeg": false
+    },
+    {
+      "id": 803,
+      "name": "Club Sandwich",
+      "price": 350,
+      "description": "Triple decker sandwich with chicken, boiled egg, cheese, lettuce, and tomatoes.",
+      "image": "clubsandwich.jpg",
+      "isVeg": false
+    },
+    {
+      "id": 804,
+      "name": "French Fries (Large)",
+      "price": 180,
+      "description": "Hot and crispy salted french fries served with ketchup.",
+      "image": "french_fries.png",
+      "isVeg": true
+    }
+  ],
+  "9": [
+    {
+      "id": 901,
+      "name": "Chocolate Fudge Cake",
+      "price": 1200,
+      "description": "Layers of rich moist chocolate cake loaded with premium chocolate fudge frosting.",
+      "image": "Cakes.jpeg",
+      "isVeg": true
+    },
+    {
+      "id": 902,
+      "name": "Lotus Cheesecake Slice",
+      "price": 380,
+      "description": "Creamy cheesecake baked on a Biscoff biscuit crust, topped with melted Lotus spread.",
+      "image": "lotus_cheesecake.png",
+      "isVeg": true
+    },
+    {
+      "id": 903,
+      "name": "Red Velvet Cupcake",
+      "price": 140,
+      "description": "Soft red velvet cake base topped with rich cream cheese frosting.",
+      "image": "red_velvet_cupcake.png",
+      "isVeg": true
+    },
+    {
+      "id": 904,
+      "name": "Chocolate Chip Cookie (Soft Baked)",
+      "price": 90,
+      "description": "Soft and chewy cookie loaded with milk chocolate chips.",
+      "image": "cookie.png",
+      "isVeg": true
+    }
+  ]
+}

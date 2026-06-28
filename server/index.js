@@ -54,6 +54,28 @@ app.get('/top-restaurant-chains', (req, res) => {
     });
 });
 
+// Endpoint to get menu data for a specific restaurant
+app.get('/menu/:restaurantId', (req, res) => {
+    const restaurantId = req.params.restaurantId;
+    const filePath = path.join(__dirname, 'data/menu.json');
+
+    fs.readFile(filePath, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Error reading file:', err);
+            res.status(500).send('Internal Server Error');
+            return;
+        }
+        try {
+            const menus = JSON.parse(data);
+            const restaurantMenu = menus[restaurantId] || [];
+            res.json(restaurantMenu);
+        } catch (error) {
+            console.error('Error parsing JSON:', error);
+            res.status(500).send('Internal Server Error');
+        }
+    });
+});
+
 // Start the server
 app.listen(port, () => {
     console.log(`Server is listening at http://localhost:${port}`);

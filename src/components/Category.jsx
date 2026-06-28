@@ -6,70 +6,96 @@ function Category() {
   const [slide, setslide] = useState(0);
 
   const fetchCategory = async () => {
-    const response = await fetch("http://localhost:5000/categories");
-    const data = await response.json();
-    setCategories(data);
+    try {
+      const response = await fetch("http://localhost:5000/categories");
+      const data = await response.json();
+      setCategories(data);
+    } catch (err) {
+      console.error("Error fetching categories:", err);
+    }
   };
 
   const nextSlide = () => {
-    // Prevent sliding out of bounds
-    // If we can't fit another full step of 3 items, stay put
-    if (slide >= categories.length - 8) return;
-    setslide(slide + 3);
+    // We display about 7 categories at once (each is ~140px, container is 1100px)
+    // Categories total is around 18 items.
+    if (slide >= categories.length - 7) return;
+    setslide(prev => Math.min(prev + 3, categories.length - 7));
   };
 
   const prevSlide = () => {
     if (slide === 0) return;
-    setslide(slide - 3);
+    setslide(prev => Math.max(prev - 3, 0));
   };
 
   useEffect(() => {
     fetchCategory();
   }, []);
 
+  const isAtStart = slide === 0;
+  const isAtEnd = slide >= categories.length - 7;
+
   return (
-    <div className="max-w-[1100px] mx-auto items-center">
-      <div className="flex items-center my-3 justify-between">
-        <div className="text-[25px] font-bold">What's on your mind?</div>
-        <div className="flex">
-          <div 
-            className="flex items-center justify-center h-[30px] w-[30px] bg-[#e2e2e7] rounded-full mx-2 cursor-pointer" 
+    <div className="max-w-[1100px] mx-auto px-4 mt-6">
+      <div className="flex items-center my-4 justify-between">
+        <div className="text-[24px] font-extrabold text-gray-800 tracking-tight">What's on your mind?</div>
+        
+        <div className="flex gap-2">
+          <button 
+            disabled={isAtStart}
+            className={`flex items-center justify-center h-[34px] w-[34px] rounded-full transition duration-200 border border-gray-200 shadow-sm ${
+              isAtStart 
+                ? "bg-gray-100 text-gray-400 cursor-not-allowed" 
+                : "bg-white text-gray-800 hover:bg-gray-50 active:scale-95 cursor-pointer"
+            }`} 
             onClick={prevSlide}
+            aria-label="Previous categories"
           >
-            <FaArrowLeft />
-          </div>
-          <div 
-            className="flex items-center justify-center h-[30px] w-[30px] bg-[#e2e2e7] rounded-full mx-2 cursor-pointer" 
+            <FaArrowLeft size={12} />
+          </button>
+          
+          <button 
+            disabled={isAtEnd}
+            className={`flex items-center justify-center h-[34px] w-[34px] rounded-full transition duration-200 border border-gray-200 shadow-sm ${
+              isAtEnd 
+                ? "bg-gray-100 text-gray-400 cursor-not-allowed" 
+                : "bg-white text-gray-800 hover:bg-gray-50 active:scale-95 cursor-pointer"
+            }`} 
             onClick={nextSlide}
+            aria-label="Next categories"
           >
-            <FaArrowRight />
-          </div>
+            <FaArrowRight size={12} />
+          </button>
         </div>
       </div>
 
-      <div className="flex overflow-hidden">
-        {categories.map((cat, index) => {
-          return (
-            <div
-              // FIX: Each item is 138px wide. Shifting by `slide * 100%` transitions perfectly per item.
-              style={{ transform: `translateX(-${slide * 100}%)` }}
-              key={index} 
-              className="w-[138px] shrink-0 duration-500 p-2"
-            >
-              {/* FIX: Points directly to your backend port 5000 folder */}
-              <img 
-                src={`http://localhost:5000/images/${cat.image}`} 
-                className="w-full h-auto object-contain" 
-                alt={cat.name} 
-              />
-              <div className="text-center text-gray-700 font-medium mt-2 text-[14px]">
-                {cat.name}
+      <div className="overflow-hidden relative w-full pb-2">
+        <div 
+          className="flex transition-transform duration-500 ease-out gap-5"
+          style={{ transform: `translateX(-${slide * 158}px)` }} // ~138px width + 20px gap
+        >
+          {categories.map((cat, index) => {
+            return (
+              <div
+                key={index} 
+                className="w-[138px] shrink-0 text-center cursor-pointer group select-none"
+              >
+                <div className="w-[130px] h-[130px] mx-auto rounded-full bg-orange-50/50 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:shadow-md group-hover:scale-105 group-hover:bg-orange-50 border border-transparent group-hover:border-orange-100">
+                  <img 
+                    src={`http://localhost:5000/images/${cat.image}`} 
+                    className="w-[90%] h-[90%] object-contain" 
+                    alt={cat.name || "Pakistani Dish"} 
+                    loading="lazy"
+                  />
+                </div>
+                <div className="text-gray-700 font-bold mt-3 text-[14.5px] group-hover:text-[#fc8019] transition duration-200 line-clamp-1">
+                  {cat.name}
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
-      <hr className="my-12 border-[1px] border-gray-300"/>
+      <hr className="my-8 border-gray-200"/>
     </div>
   );
 }
